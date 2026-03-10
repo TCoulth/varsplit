@@ -27,7 +27,7 @@ class BaseMutationParser(ABC):
     """
 
     # Delimiters that separate individual mutations in a multi-mutant string
-    DELIMITERS: list[str] = [":", ",", "/", "+", ";", " "]
+    DELIMITERS: list[str] = [":", ",", "/", "+", ";", " ","-"]
 
     def parse(self, mutation_str: str | None) -> MutationSet:
         """
