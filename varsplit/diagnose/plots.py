@@ -32,21 +32,29 @@ def plot_order_distribution(
     label_B: str = "test",
 ) -> Figure:
     """
-    Overlapping histograms of mutations-per-variant counts in A and B.
+    Grouped bar chart of mutations-per-variant counts in A and B.
+    Each mutation count gets two side-by-side bars, one per set.
     """
-    orders_A = order_metrics["orders_A"]
-    orders_B = order_metrics["orders_B"]
+    dist_A = order_metrics["distribution_A"]
+    dist_B = order_metrics["distribution_B"]
 
-    max_order = int(max(orders_A.max(), orders_B.max()))
-    bins = np.arange(0.5, max_order + 1.5, 1)
+    all_orders = sorted(set(dist_A) | set(dist_B))
+
+    # Convert counts to proportions
+    total_A = sum(dist_A.values())
+    total_B = sum(dist_B.values())
+    prop_A = [dist_A.get(o, 0) / total_A for o in all_orders]
+    prop_B = [dist_B.get(o, 0) / total_B for o in all_orders]
+
+    x = np.arange(len(all_orders))
+    w = 0.35
 
     fig, ax = plt.subplots(figsize=(7, 4))
-    ax.hist(orders_A, bins=bins, color=_COLOR_A, alpha=0.6, label=label_A,
-            density=True, rwidth=0.85)
-    ax.hist(orders_B, bins=bins, color=_COLOR_B, alpha=0.6, label=label_B,
-            density=True, rwidth=0.85)
+    ax.bar(x - w/2, prop_A, width=w, color=_COLOR_A, label=label_A, alpha=0.85)
+    ax.bar(x + w/2, prop_B, width=w, color=_COLOR_B, label=label_B, alpha=0.85)
 
-    ax.set_xticks(range(1, max_order + 1))
+    ax.set_xticks(x)
+    ax.set_xticklabels([str(o) for o in all_orders])
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f"{y:.0%}"))
     ax.legend(fontsize=9)
 
