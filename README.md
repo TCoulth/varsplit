@@ -21,8 +21,6 @@ Planned Additions
 
 ## Installation
 
-> varsplit is not yet on PyPI. Install directly from GitHub.
-
 **Into an existing environment:**
 ```bash
 pip install git+https://github.com/TCoulth/varsplit.git
