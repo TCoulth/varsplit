@@ -259,6 +259,3 @@ class KFold:
             **kwargs,
         )
 
-
-# Add __repr__ to VarSplit -- append at module level after class definition
-# (handled by monkey-patch below to avoid rewriting the whole file)
