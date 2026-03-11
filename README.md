@@ -39,7 +39,7 @@ pip install -e .
 
 ## Examples
 
-The `examples/` folder contains worked notebooks using real DMS datasets.
+The `examples/` folder contains worked notebooks using real DMS datasets. The data comes from [ProteinGym](https://proteingym.org/).
 
 | Notebook | Dataset | Variants | Demonstrates |
 |----------|---------|----------|--------------|
