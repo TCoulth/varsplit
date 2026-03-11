@@ -43,7 +43,7 @@ The `examples/` folder contains worked notebooks using real DMS datasets.
 
 | Notebook | Dataset | Variants | Demonstrates |
 |----------|---------|----------|--------------|
-| [`CBPA2_HUMAN_Tsuboyama_2023_1O6X.ipynb`](examples/CBPA2_HUMAN_Tsuboyama_2023_1O6X.ipynb) | CUE domain of ubiquitin-binding protein A ([Tsuboyama et al. 2023](https://www.nature.com/articles/s41586-023-06415-8)) | 1,357 singles + 711 doubles | All five strategies with visualizations |
+| [`CBPA2_HUMAN_Tsuboyama_2023_1O6X.ipynb`](examples/CBPA2_HUMAN_Tsuboyama_2023_1O6X.ipynb) | CUE domain of ubiquitin-binding protein A ([Tsuboyama et al. 2023](https://www.nature.com/articles/s41586-023-06328-6)) | 1,357 singles + 711 doubles | All five strategies with visualizations |
 
 Each notebook includes the dataset and runs end-to-end with no additional downloads required.
 
