@@ -7,6 +7,14 @@
 
 *This package aims to be an easy way to implement smart splitting strategies for protein engineering models.*
 
+
+*Current Major Limitations*
+- Only supports sets built around one WT
+
+*Planned Additions*
+- Splitting based upon structural features
+- clustering support for dealing with sets of variable sequences (ie not all variants of one protein)
+- 
 ---
 
 ## Installation
