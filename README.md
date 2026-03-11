@@ -9,9 +9,9 @@
 
 ---
 
-*Current Major Limitations*
+Current Major Limitations
 - Only supports sets built around one WT
-*Planned Additions*
+Planned Additions
 - Splitting based upon structural features
 - clustering support for dealing with sets of variable sequences (ie not all variants of one protein)
 
