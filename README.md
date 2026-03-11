@@ -11,6 +11,7 @@
 
 Current Major Limitations
   - Only supports sets built around one WT
+  - Extensive testing not performed for various input files. May not be fully robust
     
 Planned Additions
   - Splitting based upon structural features
